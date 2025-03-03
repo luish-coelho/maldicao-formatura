@@ -5,44 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Maldição da Foto Não Marcada</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: url('fundo.jpeg') no-repeat center center fixed;
             background-size: cover;
             color: white;
             text-align: center;
-            padding: 50px;
+            height: 100vh; /* Ocupa 100% da altura da tela */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
         }
+
         body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Camada escura com opacidade */
-    z-index: -1; /* Mantém a camada atrás do conteúdo */
-}
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Camada escura com opacidade */
+            z-index: -1; /* Mantém a camada atrás do conteúdo */
+        }
+
         h1 {
             color: red;
             background: rgba(0, 0, 0, 0.7);
             padding: 10px;
-            display: inline-block;
             border-radius: 10px;
+            max-width: 90%;
         }
-        .mensagem {
-    font-size: 20px;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 10px;
-    display: block; /* Alterado para garantir que fique em uma linha só */
-    width: 80%; /* Para limitar o tamanho do texto */
-    margin: 10px auto; /* Centraliza os elementos */
-    text-align: center;
-}
 
+        .mensagem {
+            font-size: 20px;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            display: block;
+            max-width: 90%; /* Evita que o texto saia da tela */
+            margin: 10px auto;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
