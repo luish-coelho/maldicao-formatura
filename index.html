@@ -17,11 +17,12 @@
             background-size: cover;
             color: white;
             text-align: center;
-            height: 100vh; /* Ocupa 100% da altura da tela */
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centraliza verticalmente */
-            align-items: center; /* Centraliza horizontalmente */
+            justify-content: center; 
+            align-items: center; 
+            overflow: hidden; 
         }
 
         body::before {
@@ -31,8 +32,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Camada escura com opacidade */
-            z-index: -1; /* Mantém a camada atrás do conteúdo */
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: -1; 
         }
 
         h1 {
@@ -51,9 +52,10 @@
             padding: 10px;
             border-radius: 10px;
             display: block;
-            max-width: 90%; /* Evita que o texto saia da tela */
+            max-width: 90%;
             margin: 10px auto;
             text-align: center;
+            flex-grow: 1;
         }
     </style>
 </head>
