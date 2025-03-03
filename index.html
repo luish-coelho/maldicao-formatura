@@ -17,12 +17,12 @@
             background-size: cover;
             color: white;
             text-align: center;
-            min-height: 100vh; 
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; 
-            align-items: center; 
-            overflow: hidden; 
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         body::before {
@@ -32,8 +32,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); 
-            z-index: -1; 
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
         }
 
         h1 {
@@ -42,21 +42,26 @@
             padding: 10px;
             border-radius: 10px;
             max-width: 90%;
+            margin-bottom: 5px; 
         }
 
         .mensagem {
-            font-size: 20px;
+            font-size: 18px;
             opacity: 0;
             transition: opacity 2s ease-in-out;
             background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 8px; 
             border-radius: 10px;
             display: block;
-            max-width: 90%;
-            margin: 10px auto;
+            max-width: 85%;
+            margin: 5px auto; 
             text-align: center;
-            flex-grow: 1;
         }
+
+        #mensagem1 {
+            margin-top: 3px; 
+        }
+
     </style>
 </head>
 <body>
@@ -76,7 +81,7 @@
             }, tempo);
         }
 
-        revelarMensagem("mensagem2", "Reza a lenda que, em cada formatura, um espírito do passado assombra quem não marca o formando no Instagram...p 👻", 3000);
+        revelarMensagem("mensagem2", "Reza a lenda que, em cada formatura, um espírito do passado assombra quem não marca o formando no Instagram... 👻", 3000);
         revelarMensagem("mensagem3", "Testemunhas relatam celulares desligando sozinhos e stories desaparecendo sem motivo. 😱", 6000);
         revelarMensagem("mensagem4", "A única maneira de se proteger? Publicar uma foto ou story e marcar @luish_coelho agora mesmo! 📸", 9000);
         revelarMensagem("mensagem5", "Mas cuidado... ele pode estar observando você neste exato momento... 👁️", 12000);
