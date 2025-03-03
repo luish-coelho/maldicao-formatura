@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Maldição da Foto Não Marcada</title>
     <style>
-        
         * {
             margin: 0;
             padding: 0;
@@ -21,14 +20,14 @@
             height: 100vh; 
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; 
             align-items: center;
-            overflow: hidden; 
+            overflow: hidden;
             position: relative;
-            padding-top: 60px; 
+            padding-top: 100px;
         }
 
-       
+        
         body::before {
             content: "";
             position: absolute;
@@ -43,14 +42,15 @@
         
         h1 {
             position: fixed;
-            top: 0;
+            top: 15px; 
             left: 50%;
             transform: translateX(-50%);
             color: red;
             background: rgba(0, 0, 0, 0.7);
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-size: 22px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 26px;
+            font-weight: bold;
             z-index: 10;
         }
 
@@ -62,29 +62,29 @@
         }
 
         .mensagem {
-            font-size: 18px;
+            font-size: 22px;
             opacity: 0;
             transition: opacity 2s ease-in-out;
             background: rgba(0, 0, 0, 0.5);
-            padding: 8px;
-            border-radius: 8px;
+            padding: 10px;
+            border-radius: 10px;
             display: block;
-            width: 80%;
-            margin: 5px auto;
+            width: 90%;
+            margin: 2px auto;
             text-align: center;
         }
 
         
         @media (max-width: 768px) {
             h1 {
-                font-size: 18px;
-                padding: 8px;
+                font-size: 22px; 
+                padding: 10px;
             }
 
             .mensagem {
-                font-size: 14px;
-                width: 90%;
-                padding: 6px;
+                font-size: 18px;
+                width: 95%;
+                padding: 8px;
             }
         }
     </style>
@@ -109,7 +109,7 @@
 
         revelarMensagem("mensagem2", "Reza a lenda que, em cada formatura, um espírito do passado assombra quem não marca o formando no Instagram... 👻", 3000);
         revelarMensagem("mensagem3", "Testemunhas relatam celulares desligando sozinhos e stories desaparecendo sem motivo. 😱", 6000);
-        revelarMensagem("mensagem4", "A única maneira de se proteger? Publicar uma foto ou story e marcar @luish_coelho agora mesmo! 📸", 9000);
+        revelarMensagem("mensagem4", "A única maneira de se proteger: Publicar uma foto ou story e marcar @luish_coelho agora mesmo! 📸", 9000);
         revelarMensagem("mensagem5", "Mas cuidado... ele pode estar observando você neste exato momento... 👁️", 12000);
     </script>
 
