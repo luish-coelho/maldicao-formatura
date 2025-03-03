@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Maldição da Foto Não Marcada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('fundo.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Camada escura com opacidade */
+    z-index: -1; /* Mantém a camada atrás do conteúdo */
+}
+        h1 {
+            color: red;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .mensagem {
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    display: block; /* Alterado para garantir que fique em uma linha só */
+    width: 80%; /* Para limitar o tamanho do texto */
+    margin: 10px auto; /* Centraliza os elementos */
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>📜 A Maldição da Foto Não Marcada 📜</h1>
+    <p id="mensagem1" class="mensagem">Carregando a profecia...</p>
+    <p id="mensagem2" class="mensagem"></p>
+    <p id="mensagem3" class="mensagem"></p>
+    <p id="mensagem4" class="mensagem"></p>
+    <p id="mensagem5" class="mensagem"></p>
+
+    <script>
+        function revelarMensagem(id, texto, tempo) {
+            setTimeout(() => {
+                document.getElementById(id).innerText = texto;
+                document.getElementById(id).style.opacity = 1;
+            }, tempo);
+        }
+
+        revelarMensagem("mensagem2", "Reza a lenda que, em cada formatura, um espírito do passado assombra quem não marca o formando no Instagram... 👻", 3000);
+        revelarMensagem("mensagem3", "Testemunhas relatam celulares desligando sozinhos e stories desaparecendo sem motivo. 😱", 6000);
+        revelarMensagem("mensagem4", "A única maneira de se proteger? Publicar uma foto ou story e marcar @luish_coelho agora mesmo! 📸", 9000);
+        revelarMensagem("mensagem5", "Mas cuidado... ele pode estar observando você neste exato momento... 👁️", 12000);
+    </script>
+
+</body>
+</html>
