@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Maldição da Foto Não Marcada</title>
     <style>
+       
         * {
             margin: 0;
             padding: 0;
@@ -17,14 +18,16 @@
             background-size: cover;
             color: white;
             text-align: center;
-            min-height: 100vh;
+            height: 100vh; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: hidden; 
+            position: relative;
         }
 
+        
         body::before {
             content: "";
             position: absolute;
@@ -41,8 +44,14 @@
             background: rgba(0, 0, 0, 0.7);
             padding: 10px;
             border-radius: 10px;
+            font-size: 22px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             max-width: 90%;
-            margin-bottom: 5px; 
         }
 
         .mensagem {
@@ -50,28 +59,38 @@
             opacity: 0;
             transition: opacity 2s ease-in-out;
             background: rgba(0, 0, 0, 0.5);
-            padding: 8px; 
-            border-radius: 10px;
+            padding: 8px;
+            border-radius: 8px;
             display: block;
-            max-width: 85%;
+            width: 80%;
             margin: 5px auto; 
             text-align: center;
         }
 
-        #mensagem1 {
-            margin-top: 3px; 
-        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 18px; 
+                padding: 8px;
+            }
 
+            .mensagem {
+                font-size: 14px;
+                width: 90%;
+                padding: 6px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <h1>📜 A Maldição da Foto Não Marcada 📜</h1>
-    <p id="mensagem1" class="mensagem">Carregando a profecia...</p>
-    <p id="mensagem2" class="mensagem"></p>
-    <p id="mensagem3" class="mensagem"></p>
-    <p id="mensagem4" class="mensagem"></p>
-    <p id="mensagem5" class="mensagem"></p>
+    <div class="container">
+        <p id="mensagem1" class="mensagem">Carregando a profecia...</p>
+        <p id="mensagem2" class="mensagem"></p>
+        <p id="mensagem3" class="mensagem"></p>
+        <p id="mensagem4" class="mensagem"></p>
+        <p id="mensagem5" class="mensagem"></p>
+    </div>
 
     <script>
         function revelarMensagem(id, texto, tempo) {
