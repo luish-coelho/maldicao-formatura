@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Maldição da Foto Não Marcada</title>
     <style>
-       
+        
         * {
             margin: 0;
             padding: 0;
@@ -25,9 +25,10 @@
             align-items: center;
             overflow: hidden; 
             position: relative;
+            padding-top: 60px; 
         }
 
-        
+       
         body::before {
             content: "";
             position: absolute;
@@ -39,12 +40,18 @@
             z-index: -1;
         }
 
+        
         h1 {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             color: red;
             background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 10px;
             font-size: 22px;
+            z-index: 10;
         }
 
         .container {
@@ -63,13 +70,14 @@
             border-radius: 8px;
             display: block;
             width: 80%;
-            margin: 5px auto; 
+            margin: 5px auto;
             text-align: center;
         }
 
+        
         @media (max-width: 768px) {
             h1 {
-                font-size: 18px; 
+                font-size: 18px;
                 padding: 8px;
             }
 
@@ -85,7 +93,6 @@
 
     <h1>📜 A Maldição da Foto Não Marcada 📜</h1>
     <div class="container">
-        <p id="mensagem1" class="mensagem">Carregando a profecia...</p>
         <p id="mensagem2" class="mensagem"></p>
         <p id="mensagem3" class="mensagem"></p>
         <p id="mensagem4" class="mensagem"></p>
