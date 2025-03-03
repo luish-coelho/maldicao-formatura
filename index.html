@@ -77,6 +77,19 @@
             text-align: center;
         }
 
+        #ButtonStories {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background: red;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
 
         @media (max-width: 768px) {
             h1 {
@@ -101,7 +114,11 @@
         <p id="mensagem3" class="mensagem"></p>
         <p id="mensagem4" class="mensagem"></p>
         <p id="mensagem5" class="mensagem"></p>
+
+        <button id="ButtonStories" onclick="abrirStories()"> Abrir Stories 📸</button>
     </div>
+
+
 
     <script>
         function revelarMensagem(id, texto, tempo) {
@@ -111,10 +128,18 @@
             }, tempo);
         }
 
+        function abrirStories() {
+            window.location.href = "instagram://stories";
+        }
+
         revelarMensagem("mensagem2", "Reza a lenda que, em cada formatura, um espírito do passado assombra quem não marca o formando no Instagram... 👻", 3000);
         revelarMensagem("mensagem3", "Testemunhas relatam celulares desligando sozinhos e stories desaparecendo sem motivo. 😱", 6000);
         revelarMensagem("mensagem4", "A única maneira de se proteger: Publicar uma foto ou story e marcar @luish_coelho agora mesmo! 📸", 9000);
         revelarMensagem("mensagem5", "Mas cuidado... ele pode estar observando você neste exato momento... 👁️", 12000);
+
+        setTimeout(() => {
+            document.getElementById("ButtonStories").style.opacity = 1;
+        }, 15000);
     </script>
 
 </body>
